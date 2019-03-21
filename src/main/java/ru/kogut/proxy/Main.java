@@ -13,7 +13,7 @@ public class Main {
         return (CRUDOperation)Proxy.newProxyInstance(
                 Client.class.getClassLoader(),
                 Client.class.getInterfaces(),
-                new ProfileHandler(crudOperation)
+                new GlobalHandler(crudOperation)
         );
 
     }
@@ -23,7 +23,7 @@ public class Main {
         return (CRUDOperation)Proxy.newProxyInstance(
                 Product.class.getClassLoader(),
                 Product.class.getInterfaces(),
-                new ProfileHandler(crudOperation)
+                new ProfilerHandler(crudOperation)
         );
     }
 
